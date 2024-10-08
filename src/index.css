@@ -74,6 +74,8 @@ code {
   border-top: none;
   border-bottom: 1px solid #0e0202; /* add a color to the border-bottom */
   border-radius: 0px 0 0 0px;
+  flex-basis: 100px;
+  text-align: center;
 }
 
 #search-input:focus {
@@ -94,6 +96,23 @@ code {
   cursor: pointer;
 }
 
-#search-button:hover {
+.Search-icon{
+  flex: 1;
+  cursor: pointer;
+}
+
+/* #search-button:hover {
   background-color: #3e8e41;
+} */
+
+.Search-box:hover #search-input, .Search-box:focus-within #search-input {
+  transform: scale(1.1); /* Increase the size by 10% on hover */
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+}
+
+.Search-box:hover .fa-search, .Search-box:focus-within .fa-search {
+  transform: scale(1.1); /* Increase the size by 10% on hover */
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
 }

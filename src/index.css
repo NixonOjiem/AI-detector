@@ -15,6 +15,9 @@ code {
 *{
   margin: 0px;
 }
+.App{
+  max-width: 100%;
+}
 
 .Navigation-bar{
   background-color: #ffffff;
@@ -28,6 +31,7 @@ code {
 
 .App-heading{
   margin-left: 3%;
+  margin-top: 10px;
 }
 
 .List-items{
@@ -115,4 +119,19 @@ code {
   transform: scale(1.1); /* Increase the size by 10% on hover */
   transition-timing-function: ease-in-out;
   transition-duration: 0.5s;
+}
+
+.Dashboard-container{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.Cards{
+  margin-top: 5vh;
+  background-color: aqua;
+  margin: 10px;
+  width: 30vw;
 }

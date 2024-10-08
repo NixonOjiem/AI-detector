@@ -1,4 +1,5 @@
 import './App.css';
+
 import Header from './components/Header';
 import SearchBox from './components/SearchBox';
 import DashboardContainer from './components/DashboardContainer';
@@ -6,9 +7,9 @@ import DashboardContainer from './components/DashboardContainer';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <SearchBox /> 
-      <DashboardContainer /> 
+        <Header />
+        <SearchBox /> 
+        <DashboardContainer />
     </div>
   );
 }

@@ -4,12 +4,12 @@ function DashboardContainer() {
 
   return (
     <>
-    <div class="container">
-  <p class="container-title">Here are the features we’re proud of</p>
+    <div className="container">
+  <p className="container-title">Here are the features we’re proud of</p>
 
-  <div class="gradient-cards">
-    <div class="card">
-      <div class="container-card bg-green-box">
+  <div className="gradient-cards">
+    <div className="card">
+      <div className="container-card bg-green-box">
         <svg width="80" height="80" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="1" y="1" width="118" height="118" rx="24" fill="url(#paint0_linear_1366_4547)" fill-opacity="0.15" stroke="url(#paint1_radial_1366_4547)" stroke-width="2"></rect>
           <path d="M33.2182 61.4C33.2182 75.425 37.2682 86.75 51.5932 86.75C65.9182 86.75 69.8182 75.425 69.8182 61.4C69.8182 47.225 65.9182 35.9 51.5932 35.9C37.2682 35.9 33.2182 47.225 33.2182 61.4ZM43.7182 61.4C43.7182 53.075 45.5932 46.1 51.5932 46.1C57.5182 46.1 59.3182 53.075 59.3182 61.4C59.3182 69.65 57.5182 76.55 51.5932 76.55C45.5932 76.55 43.7182 69.65 43.7182 61.4Z" fill="#54E8A9"></path>
@@ -26,13 +26,13 @@ function DashboardContainer() {
             </radialGradient>
           </defs>
         </svg>
-        <p class="card-title">Engagements</p>
-        <p class="card-description">Hubble lets users borrow USDH for a one-time 0.5% fee. No variable rates. No interest charged, ever.</p>
+        <p className="card-title">Engagements</p>
+        <p className="card-description">Hubble lets users borrow USDH for a one-time 0.5% fee. No variable rates. No interest charged, ever.</p>
       </div>
     </div>
 
-    <div class="card">
-      <div class="container-card bg-white-box">
+    <div className="card">
+      <div className="container-card bg-white-box">
         <svg width="80" height="80" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="1" y="1" width="118" height="118" rx="24" fill="url(#paint0_linear_1366_4565)" fill-opacity="0.15" stroke="url(#paint1_radial_1366_4565)" stroke-width="2"></rect>
           <ellipse rx="21.9462" ry="22.2891" transform="matrix(0.964749 0.263173 -0.254526 0.967066 60.1463 63.0804)" stroke="white" stroke-width="1.00101" stroke-linecap="round" stroke-dasharray="4 5.01"></ellipse>
@@ -54,13 +54,13 @@ function DashboardContainer() {
             </radialGradient>
           </defs>
         </svg>
-        <p class="card-title">Top Keywords</p>
-        <p class="card-description">Deposit a variety of assets on Hubble, raise your collateral ratio, and unlock the liquidity in your wallet.</p>
+        <p className="card-title">Top Keywords</p>
+        <p className="card-description">Deposit a variety of assets on Hubble, raise your collateral ratio, and unlock the liquidity in your wallet.</p>
       </div>
     </div>
 
-    <div class="card">
-      <div class="container-card bg-yellow-box">
+    <div className="card">
+      <div className="container-card bg-yellow-box">
         <svg width="80" height="80" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="1" y="1" width="118" height="118" rx="24" fill="url(#paint0_linear_1366_4557)" fill-opacity="0.15" stroke="url(#paint1_radial_1366_4557)" stroke-width="2"></rect>
           <path d="M74.2105 36C73.373 36 72.5698 35.6839 71.9776 35.1213C71.3853 34.5587 71.0526 33.7956 71.0526 33C71.0526 32.2044 71.3853 31.4413 71.9776 30.8787C72.5698 30.3161 73.373 30 74.2105 30H86.8421C87.6796 30 88.4829 30.3161 89.0751 30.8787C89.6673 31.4413 90 32.2044 90 33V45C90 45.7956 89.6673 46.5587 89.0751 47.1213C88.4829 47.6839 87.6796 48 86.8421 48C86.0046 48 85.2014 47.6839 84.6091 47.1213C84.0169 46.5587 83.6842 45.7956 83.6842 45V40.242L65.3905 57.621C64.7983 58.1834 63.9953 58.4994 63.1579 58.4994C62.3205 58.4994 61.5175 58.1834 60.9253 57.621L52.1053 49.242L35.3905 65.121C34.7949 65.6675 33.9972 65.9699 33.1693 65.963C32.3413 65.9562 31.5492 65.6407 30.9637 65.0845C30.3782 64.5282 30.0461 63.7758 30.0389 62.9892C30.0317 62.2026 30.35 61.4448 30.9253 60.879L49.8726 42.879C50.4648 42.3166 51.2679 42.0006 52.1053 42.0006C52.9426 42.0006 53.7457 42.3166 54.3379 42.879L63.1579 51.258L79.219 36H74.2105ZM36.3158 78V87C36.3158 87.7957 35.9831 88.5587 35.3909 89.1213C34.7986 89.6839 33.9954 90 33.1579 90C32.3204 90 31.5171 89.6839 30.9249 89.1213C30.3327 88.5587 30 87.7957 30 87V78C30 77.2043 30.3327 76.4413 30.9249 75.8787C31.5171 75.3161 32.3204 75 33.1579 75C33.9954 75 34.7986 75.3161 35.3909 75.8787C35.9831 76.4413 36.3158 77.2043 36.3158 78ZM52.1053 66C52.1053 65.2043 51.7726 64.4413 51.1803 63.8787C50.5881 63.3161 49.7849 63 48.9474 63C48.1098 63 47.3066 63.3161 46.7144 63.8787C46.1222 64.4413 45.7895 65.2043 45.7895 66V87C45.7895 87.7957 46.1222 88.5587 46.7144 89.1213C47.3066 89.6839 48.1098 90 48.9474 90C49.7849 90 50.5881 89.6839 51.1803 89.1213C51.7726 88.5587 52.1053 87.7957 52.1053 87V66ZM64.7368 69C65.5744 69 66.3776 69.3161 66.9698 69.8787C67.562 70.4413 67.8947 71.2043 67.8947 72V87C67.8947 87.7957 67.562 88.5587 66.9698 89.1213C66.3776 89.6839 65.5744 90 64.7368 90C63.8993 90 63.0961 89.6839 62.5039 89.1213C61.9117 88.5587 61.5789 87.7957 61.5789 87V72C61.5789 71.2043 61.9117 70.4413 62.5039 69.8787C63.0961 69.3161 63.8993 69 64.7368 69ZM83.6842 57C83.6842 56.2044 83.3515 55.4413 82.7593 54.8787C82.1671 54.3161 81.3638 54 80.5263 54C79.6888 54 78.8856 54.3161 78.2933 54.8787C77.7011 55.4413 77.3684 56.2044 77.3684 57V87C77.3684 87.7957 77.7011 88.5587 78.2933 89.1213C78.8856 89.6839 79.6888 90 80.5263 90C81.3638 90 82.1671 89.6839 82.7593 89.1213C83.3515 88.5587 83.6842 87.7957 83.6842 87V57Z" fill="#FFEE24"></path>
@@ -76,13 +76,13 @@ function DashboardContainer() {
             </radialGradient>
           </defs>
         </svg>
-        <p class="card-title">Traffic Sources</p>
-        <p class="card-description">While your collateral is deposited, delegate it to earn the highest yield available in the Solana ecosystem.</p>
+        <p className="card-title">Traffic Sources</p>
+        <p className="card-description">While your collateral is deposited, delegate it to earn the highest yield available in the Solana ecosystem.</p>
       </div>
     </div>
 
-    <div class="card">
-      <div class="container-card bg-blue-box">
+    <div className="card">
+      <div className="container-card bg-blue-box">
         <svg width="80" height="80" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="1" y="1" width="118" height="118" rx="24" fill="url(#paint0_linear_1366_4582)" fill-opacity="0.15" stroke="url(#paint1_radial_1366_4582)" stroke-width="2"></rect>
           <path d="M90.9405 64.775L88.0155 69.55L85.1155 64.775H80.0655L85.5155 72.85L79.5905 82H84.4905L88.0155 76.175L91.5155 82H96.4405L90.4905 72.85L95.9405 64.775H90.9405Z" fill="#87A1FF"></path>
@@ -99,8 +99,8 @@ function DashboardContainer() {
             </radialGradient>
           </defs>
         </svg>
-        <p class="card-title">Estimated Monthly Visits</p>
-        <p class="card-description">Hubble’s capital-efficient 110% collateral ratio lets users leverage up to 11x on their deposits.</p>
+        <p className="card-title">Estimated Monthly Visits</p>
+        <p className="card-description">Hubble’s capital-efficient 110% collateral ratio lets users leverage up to 11x on their deposits.</p>
       </div>
     </div>
   </div>

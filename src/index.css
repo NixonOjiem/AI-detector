@@ -19,7 +19,7 @@ code {
   max-width: 100%;
 }
 
-.Navigation-bar{
+.Navigation-bar {
   background-color: #0b0101;
   display: flex;
   flex-direction: row;
@@ -27,32 +27,34 @@ code {
   width: 100%;
   box-shadow: 0 4px 8px rgba(253, 251, 251, 0.2);
   margin-bottom: 3vh;
+  flex-grow: 1; /* Add this to make the navigation bar take up the full width */
+  box-sizing: border-box; /* Add this to include padding and border in width calculation */
 }
 
-.App-heading{
-  margin-left: 3%;
+.App-heading {
+  margin-left: 0; /* Remove or adjust this margin */
   margin-top: 10px;
   color: #fff;
 }
 
-.List-items{
+.List-items {
   list-style: none;
   display: flex;
   flex-direction: row;
-  margin-left: 60%;
+  margin-left: 0; /* Remove or adjust this margin */
 }
 
-.List-items li{
+.List-items li {
   margin: 20px;
 }
 
-.List-items li a{
+.List-items li a {
   text-decoration: none;
   color: rgb(254, 249, 249);
   cursor: pointer;
 }
 
-.List-items li:hover{
+.List-items li:hover {
   transform: scale(1.1); /* Increase the size by 10% on hover */
   transition-timing-function: ease-in-out;
   transition-duration: 0.5s;

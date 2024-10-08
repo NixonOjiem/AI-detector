@@ -11,3 +11,89 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*{
+  margin: 0px;
+}
+
+.Navigation-bar{
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3vh;
+}
+
+.App-heading{
+  margin-left: 3%;
+}
+
+.List-items{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin-left: 60%;
+}
+
+.List-items li{
+  margin: 20px;
+}
+
+.List-items li a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.List-items li:hover{
+  transform: scale(1.1); /* Increase the size by 10% on hover */
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+}
+
+.Search-box {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  /* background-color: #f0f0f0; */
+  /* border: 1px solid #ddd; */
+  padding: 10px;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  margin: 0 auto;
+}
+
+#search-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #0e0202; /* add a color to the border-bottom */
+  border-radius: 0px 0 0 0px;
+}
+
+#search-input:focus {
+  outline: none; /* remove the default outline */
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid #0e0202; /* keep only the bottom border */
+}
+
+#search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #3e8e41;
+}

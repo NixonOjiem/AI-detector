@@ -26,7 +26,7 @@ function DashboardContainer() {
             </radialGradient>
           </defs>
         </svg>
-        <p class="card-title">Zero-cost Possibilities</p>
+        <p class="card-title">Engagements</p>
         <p class="card-description">Hubble lets users borrow USDH for a one-time 0.5% fee. No variable rates. No interest charged, ever.</p>
       </div>
     </div>
@@ -54,7 +54,7 @@ function DashboardContainer() {
             </radialGradient>
           </defs>
         </svg>
-        <p class="card-title">Multi-Asset Collateral</p>
+        <p class="card-title">Top Keywords</p>
         <p class="card-description">Deposit a variety of assets on Hubble, raise your collateral ratio, and unlock the liquidity in your wallet.</p>
       </div>
     </div>
@@ -76,7 +76,7 @@ function DashboardContainer() {
             </radialGradient>
           </defs>
         </svg>
-        <p class="card-title">Get Yield on Deposits</p>
+        <p class="card-title">Traffic Sources</p>
         <p class="card-description">While your collateral is deposited, delegate it to earn the highest yield available in the Solana ecosystem.</p>
       </div>
     </div>
@@ -99,7 +99,7 @@ function DashboardContainer() {
             </radialGradient>
           </defs>
         </svg>
-        <p class="card-title">Get up to 11x Leverage</p>
+        <p class="card-title">Estimated Monthly Visits</p>
         <p class="card-description">Hubble’s capital-efficient 110% collateral ratio lets users leverage up to 11x on their deposits.</p>
       </div>
     </div>

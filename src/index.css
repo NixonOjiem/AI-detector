@@ -91,16 +91,6 @@ code {
   border-bottom: 2px solid #0e0202; /* keep only the bottom border */
 }
 
-#search-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 0 10px 10px 0;
-  background-color: #4CAF50;
-  color: #fff;
-  cursor: pointer;
-}
-
 .Search-icon{
   flex: 1;
   cursor: pointer;
@@ -187,7 +177,7 @@ code {
   margin-inline: auto;
 }
 
-.Cards:hover{
+.cards:hover{
   transform: scale(1.1); /* Increase the size by 10% on hover */
   transition-timing-function: ease-in-out;
   transition-duration: 0.5s;

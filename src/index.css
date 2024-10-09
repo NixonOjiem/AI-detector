@@ -24,24 +24,28 @@ code {
   display: flex;
   flex-direction: row;
   height: auto;
-  width: 100%;
+  justify-content: space-between; /* Add this */
   box-shadow: 0 4px 8px rgba(253, 251, 251, 0.2);
   margin-bottom: 3vh;
-  flex-grow: 1; /* Add this to make the navigation bar take up the full width */
-  box-sizing: border-box; /* Add this to include padding and border in width calculation */
+  flex-grow: 1;
+  box-sizing: border-box;
 }
 
 .App-heading {
   margin-left: 0; /* Remove or adjust this margin */
   margin-top: 10px;
   color: #fff;
+  float: left !important;
 }
 
 .List-items {
   list-style: none;
   display: flex;
   flex-direction: row;
-  margin-left: 0; /* Remove or adjust this margin */
+  /* margin-left: 0;  */
+  /* Remove or adjust this margin */
+  float: right !important;
+  justify-content: flex-start;
 }
 
 .List-items li {

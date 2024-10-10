@@ -22,24 +22,24 @@ function SearchBox() {
     }
   };
 
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.request(options);
-      console.log('API Response Data:', response.data);
-      setData(response.data);
-    } catch (error) {
-      console.error('API Request Failed:', error);
-      setError(error.message);
-      // You can also display a friendly error message to the user here
-    }
-  };
+  // const handleSearch = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await axios.request(options);
+  //     console.log('API Response Data:', response.data);
+  //     setData(response.data);
+  //   } catch (error) {
+  //     console.error('API Request Failed:', error);
+  //     setError(error.message);
+  //     // You can also display a friendly error message to the user here
+  //   }
+  // };
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      handleSearch(e);
-    }
-  };
+  // const handleKeyPress = (e) => {
+  //   if (e.key === 'Enter') {
+  //     handleSearch(e);
+  //   }
+  // };
 
   return (
     <div className="Search-box">

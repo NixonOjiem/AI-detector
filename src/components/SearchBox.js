@@ -24,15 +24,15 @@ function SearchBox() {
 
  const handleSearch = async (e) => {
    e.preventDefault();
-   try {
-    const response = await axios.request(options);
-    console.log('API Response Data:', response.data);
-    setData(response.data);
-    } catch (error) {
-    console.error('API Request Failed:', error);
-    setError(error.message);
-   //     // You can also display a friendly error message to the user here
-     }
+  //  try {
+  //   const response = await axios.request(options);
+  //   console.log('API Response Data:', response.data);
+  //   setData(response.data);
+  //   } catch (error) {
+  //   console.error('API Request Failed:', error);
+  //   setError(error.message);
+  //  //     // You can also display a friendly error message to the user here
+  //    }
   };
 
    const handleKeyPress = (e) => {
@@ -43,11 +43,11 @@ function SearchBox() {
 
   return (
     <div className="Search-box">
-      <input 
-        type="search" 
-        id="search-input" 
-        placeholder="Search URL..." 
-        onKeyPress={handleKeyPress} 
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Search URL..."
+        onKeyPress={handleKeyPress}
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />

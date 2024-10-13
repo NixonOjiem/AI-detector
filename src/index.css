@@ -271,10 +271,18 @@ code {
   background-color: #080509;
   color: white;
   padding: 10px;
+  margin-top: 10px;
 }
 .btn-primary:hover{
   background-color: white;
   color: #080509;
   transition-timing-function: ease-in-out;
   transition-duration: 1s;
+}
+.App-tittle{
+  margin: 0 auto;
+  width: fit-content; 
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
 }

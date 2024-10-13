@@ -4,7 +4,8 @@ function ArtificialInteligenceCheck() {
   return (
     <>    
     <div>
-     <textarea className='User-input' rows={10} placeholder= 'Type or paste some text to verify whether it is AI genreted'/>
+        <h1 className='App-tittle'>AI Detector</h1>
+     <textarea className='User-input' rows={15} placeholder= 'Type or paste some text to verify whether it is AI genreted'/>
     </div>
     <div>
         <button className='btn-primary'>Check</button>

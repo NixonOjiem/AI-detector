@@ -286,3 +286,13 @@ code {
   display: block;
   margin-bottom: 20px;
 }
+
+/* My results */
+.Results-container{
+  margin-top: 20px;
+}
+.Results-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

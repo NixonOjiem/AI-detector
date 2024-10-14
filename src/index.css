@@ -176,8 +176,11 @@ code {
   line-height: 60px;
 }
 
+.SVG{
+  display: inline-flex;
+}
 .card {
-  max-width: 550px;
+  max-width: 500px;
   border: 0;
   width: 100%;
   margin-inline: auto;
@@ -247,14 +250,17 @@ code {
   font-style: normal;
   font-size: 28px;
   padding-bottom: 8px;
+  display: inline-flex;
+  margin-right: 20px;
 }
 
 .card-description {
   font-weight: 600;
   line-height: 32px;
   color: hsla(0, 0%, 100%, 0.5);
-  font-size: 16px;
+  font-size: 70px;
   max-width: 470px;
+  display: contents;
 }
 /* This is the text area */
 
@@ -295,4 +301,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.paragraph{
+  color: grey;
 }

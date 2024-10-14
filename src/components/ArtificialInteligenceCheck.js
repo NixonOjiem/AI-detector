@@ -58,7 +58,7 @@ function ArtificialInteligenceCheck() {
         <button className='btn-primary' onClick={handleClick}>Check</button>
       </div>
       {result && (
-        <div className='Results-container'>
+        <div className='gradient-cards'>
           <h2 className='Results-header'>Result:</h2>
 
           <div className="card">
@@ -101,7 +101,7 @@ function ArtificialInteligenceCheck() {
                 </radialGradient>
                 </defs>
               </svg> <br />
-              <p className="card-title">Fake Percentage:</p>
+              <p className="card-title">AI Percentage:</p>
               <h1 className="card-description">{result.fakePercentage}%</h1>
             </div>
          </div>

@@ -4,7 +4,7 @@ import axios from 'axios';
 function ArtificialInteligenceCheck() {
   const [inputText, setInputText] = useState('');
   const [result, setResult] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const storedResult = localStorage.getItem('aiDetectorResult');
@@ -21,6 +21,8 @@ function ArtificialInteligenceCheck() {
 
   const handleClick = async () => {
     setLoading(true);
+    await new Promise(resolve => setTimeout(resolve, 100)); // Small delay for debugging
+    console.log('Loading state', loading)
     try {
       const options = {
         method: 'POST',
@@ -67,6 +69,7 @@ function ArtificialInteligenceCheck() {
               <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="2s" repeatCount="indefinite" />
             </circle>
           </svg>
+          <h2 className='Results-header'>Loading...</h2>
         </div>
       ) : result ? (
         <>

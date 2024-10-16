@@ -4,22 +4,23 @@ import axios from 'axios';
 function ArtificialInteligenceCheck() {
   const [inputText, setInputText] = useState('');
   const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-   useEffect(() => {
-     const storedResult = localStorage.getItem('aiDetectorResult');
-     if (storedResult) {
-       setResult(JSON.parse(storedResult));
-     }
-   }, []);
+  useEffect(() => {
+    const storedResult = localStorage.getItem('aiDetectorResult');
+    if (storedResult) {
+      setResult(JSON.parse(storedResult));
+    }
+  }, []);
 
-   useEffect(() => {
-     if (result) {
-       localStorage.setItem('aiDetectorResult', JSON.stringify(result));
-     }
-   }, [result]);
-
+  useEffect(() => {
+    if (result) {
+      localStorage.setItem('aiDetectorResult', JSON.stringify(result));
+    }
+  }, [result]);
 
   const handleClick = async () => {
+    setLoading(true);
     try {
       const options = {
         method: 'POST',
@@ -39,11 +40,13 @@ function ArtificialInteligenceCheck() {
       setResult(resultData);
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <>    
+    <>
       <div>
         <h1 className='App-tittle'>AI Detector</h1>
         <textarea
@@ -57,13 +60,20 @@ function ArtificialInteligenceCheck() {
       <div>
         <button className='btn-primary' onClick={handleClick}>Check</button>
       </div>
-      {result && (
+      {loading ? (
+        <div className="loading-spinner">
+          <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" stroke="#87A1FF" strokeWidth="10" strokeLinecap="round" strokeDasharray="283.916" strokeDashoffset="283.916" fill="none">
+              <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="2s" repeatCount="indefinite" />
+            </circle>
+          </svg>
+        </div>
+      ) : result ? (
         <>
-        <h2 className='Results-header'>Result:</h2>
-        <div className='gradient-cards'>
-          
+          <h2 className='Results-header'>Result:</h2>
+          <div className='gradient-cards'>
 
-        <div className="card">
+          <div className="card">
             <div className="container-card bg-yellow-box">
               <svg width="80" height="80" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className='SVG'>
                 <rect x="1" y="1" width="118" height="118" rx="24" fill="url(#paint0_linear_1366_4557)" fill-opacity="0.15" stroke="url(#paint1_radial_1366_4557)" stroke-width="2"></rect>
@@ -84,9 +94,8 @@ function ArtificialInteligenceCheck() {
               <p1 className="card-description">{result.textWords}</p1>
             </div>
          </div>
-          
-          
-          <div className="card">
+
+            <div className="card">
             <div className="container-card bg-yellow-box">
               <svg width="80" height="80" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className='SVG'>
                 <rect x="1" y="1" width="118" height="118" rx="24" fill="url(#paint0_linear_1366_4557)" fill-opacity="0.15" stroke="url(#paint1_radial_1366_4557)" stroke-width="2"></rect>
@@ -131,7 +140,6 @@ function ArtificialInteligenceCheck() {
             </div>
          </div>
 
-
          <div className="card">
             <div className="container-card bg-yellow-box">
             <svg width="80" height="80" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -154,7 +162,6 @@ function ArtificialInteligenceCheck() {
               <h1 className="card-description">{result.isHuman ? 'Yes' : 'No'}</h1>
             </div>
          </div>
-
 
          <div className="card">
             <div className="container-card bg-yellow-box">
@@ -201,38 +208,12 @@ function ArtificialInteligenceCheck() {
             </div>
          </div>
 
-
-         
-          {/* <div>
-            <p><strong>AI Words:</strong> {result.aiWords}</p>
-            <p><strong>Fake Percentage:</strong> {result.fakePercentage}%</p>
-            <p><strong>Is Human:</strong> {result.isHuman ? 'Yes' : 'No'}</p>
           </div>
-          <div>
-            <h3>Feedback:</h3>
-            <p>{result.otherFeedback}</p>
-          </div>
-          <div>
-            <h3>Sentences:</h3>
-            <ul>
-              {result.sentences.map((sentence, index) => (
-                <li key={index}>{sentence}</li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3>Status:</h3>
-            <p>{result.status ? 'Success' : 'Failed'}</p>
-          </div>
-          <div>
-            <h3>Text Words:</h3>
-            <p>{result.textWords}</p>
-          </div> */}
-        </div>
         </>
-      )}
+      ) : null}
     </>
   );
+  
 }
 
 export default ArtificialInteligenceCheck;

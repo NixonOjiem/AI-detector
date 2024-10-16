@@ -63,7 +63,7 @@ function ArtificialInteligenceCheck() {
       {loading ? (
         <div className="loading-spinner">
           <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="45" stroke="#87A1FF" stroke-width="10" stroke-linecap="round" stroke-dasharray="283.916" stroke-dashoffset="283.916" fill="none">
+            <circle cx="50" cy="50" r="45" stroke="#87A1FF" strokeWidth="10" strokeLinecap="round" strokeDasharray="283.916" strokeDashoffset="283.916" fill="none">
               <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="2s" repeatCount="indefinite" />
             </circle>
           </svg>
@@ -72,5 +72,48 @@ function ArtificialInteligenceCheck() {
         <>
           <h2 className='Results-header'>Result:</h2>
           <div className='gradient-cards'>
+            <div className="card">
+              <div className="container-card bg-yellow-box">
+                <p className="card-title">Total Words:</p>
+                <p className="card-description">{result.textWords}</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="container-card bg-yellow-box">
+                <p className="card-title">AI Words:</p>
+                <h1 className="card-description">{result.aiWords}</h1>
+              </div>
+            </div>
+            <div className="card">
+              <div className="container-card bg-yellow-box">
+                <p className="card-title">AI Percentage:</p>
+                <h1 className="card-description">{result.fakePercentage}%</h1>
+              </div>
+            </div>
+            <div className="card">
+              <div className="container-card bg-yellow-box">
+                <p className="card-title">Is human:</p>
+                <h1 className="card-description">{result.isHuman ? 'Yes' : 'No'}</h1>
+              </div>
+            </div>
+            <div className="card">
+              <div className="container-card bg-yellow-box">
+                <p className="card-title">Feedback:</p>
+                <p className="paragraph">{result.otherFeedback}</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="container-card bg-yellow-box">
+                <p className="card-title">Verification Status:</p>
+                <h1 className="card-description">{result.status ? 'Success' : 'Failed'}</h1>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : null}
+    </>
+  );
+  
+}
 
-            {/* ... rest of the code remains the same ... */}
+export default ArtificialInteligenceCheck;

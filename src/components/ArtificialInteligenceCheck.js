@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import LoadingSpinner from './LoadingSpinner';
 
 function ArtificialInteligenceCheck() {
   const [inputText, setInputText] = useState('');
@@ -68,6 +69,7 @@ function ArtificialInteligenceCheck() {
             <circle cx="50" cy="50" r="45" stroke="#87A1FF" strokeWidth="10" strokeLinecap="round" strokeDasharray="283.916" strokeDashoffset="283.916" fill="none">
               <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="2s" repeatCount="indefinite" />
             </circle>
+            <LoadingSpinner />
           </svg>
           <h2 className='Results-header'>Loading...</h2>
         </div>

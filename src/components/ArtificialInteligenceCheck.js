@@ -1,24 +1,33 @@
 import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import axios from 'axios';
 import LoadingSpinner from './LoadingSpinner';
 
 function ArtificialInteligenceCheck() {
   const [inputText, setInputText] = useState('');
   const [result, setResult] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const storedResult = localStorage.getItem('aiDetectorResult');
-    if (storedResult) {
-      setResult(JSON.parse(storedResult));
-    }
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
   }, []);
 
-  useEffect(() => {
-    if (result) {
-      localStorage.setItem('aiDetectorResult', JSON.stringify(result));
-    }
-  }, [result]);
+  // useEffect(() => {
+  //   const storedResult = localStorage.getItem('aiDetectorResult');
+  //   if (storedResult) {
+  //     setResult(JSON.parse(storedResult));
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   if (result) {
+  //     localStorage.setItem('aiDetectorResult', JSON.stringify(result));
+  //   }
+  // }, [result]);
 
   const handleClick = async () => {
     setLoading(true);
@@ -50,7 +59,8 @@ function ArtificialInteligenceCheck() {
 
   return (
     <>
-      <div>
+      <div data-aos="zoom-in-down"
+      >
         <h1 className='App-tittle'>AI Detector</h1>
         <textarea
           className='User-input'
@@ -61,20 +71,16 @@ function ArtificialInteligenceCheck() {
         />
       </div>
       <div>
-        <button className='btn-primary' onClick={handleClick}>Check</button>
+        <button className='btn-primary' onClick={handleClick} data-aos="zoom-in-down">Check</button>
       </div>
       {loading ? (
         <div className="loading-spinner">
-          <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="45" stroke="#87A1FF" strokeWidth="10" strokeLinecap="round" strokeDasharray="283.916" strokeDashoffset="283.916" fill="none">
-              <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="2s" repeatCount="indefinite" />
-            </circle>
-            <LoadingSpinner />
-          </svg>
-          <h2 className='Results-header'>Loading...</h2>
+          <LoadingSpinner />
         </div>
       ) : result ? (
         <>
+        <div data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom">
           <h2 className='Results-header'>Result:</h2>
           <div className='gradient-cards'>
 
@@ -213,6 +219,7 @@ function ArtificialInteligenceCheck() {
             </div>
          </div>
 
+          </div>
           </div>
         </>
       ) : null}

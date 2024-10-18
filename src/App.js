@@ -1,5 +1,6 @@
 import './App.css';
 
+
 import Header from './components/Header';
 import SearchBox from './components/SearchBox';
 import DashboardContainer from './components/DashboardContainer';
@@ -11,8 +12,7 @@ function App() {
     <div className="App">
         <Header />
         <ArtificialInteligenceCheck />
-        {/* <SearchBox />  */}
-        {/* <DashboardContainer /> */}
+        {/* <LoadingSpinner /> */}
     </div>
   );
 }

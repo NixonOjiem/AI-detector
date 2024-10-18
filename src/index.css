@@ -307,18 +307,21 @@ code {
 }
 
 /* The loading spinner */
-
+.loading-spinner{
+  margin-top: 20px;
+}
 .spinner {
+  margin: 0 auto;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
 }
 
 .spinner__text {
-  font-size: 2rem;
+  font-size: 1.5rem;
   animation: loading-opacity 2s ease-in-out infinite;
 }
 
@@ -332,17 +335,17 @@ code {
 }
 
 .spinner__sector--red {
-  border-top: 15px solid lightblue;
+  border-top: 15px solid rgb(235, 244, 2);
   animation: rotate 2s ease-out infinite;
 }
 
 .spinner__sector--blue {
-  border-top: 15px solid lightcoral;
+  border-top: 15px solid rgb(181, 183, 100);
   animation: rotate 2.5s ease-in infinite;
 }
 
 .spinner__sector--green {
-  border-top: 15px solid lightgreen;
+  border-top: 15px solid rgb(20, 20, 20);
   animation: rotate 1.5s ease-in-out infinite;
 }
 

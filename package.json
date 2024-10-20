@@ -2,7 +2,7 @@
   "name": "web-analytics",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://NixonOjiem.github.io/AI-detector",
+  "homepage": "https://nixonojiem.github.io/AI-detector",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
@@ -20,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
